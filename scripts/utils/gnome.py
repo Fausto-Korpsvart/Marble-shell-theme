@@ -13,7 +13,7 @@ def gnome_version() -> str | None:
     try:
         output = subprocess.check_output(['gnome-shell', '--version'], text=True).strip()
         return output.split(' ')[2]
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, FileNotFoundError):
         return None
 
 def apply_gnome_theme(theme=None) -> bool:

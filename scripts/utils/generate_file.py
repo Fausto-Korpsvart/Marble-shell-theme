@@ -13,7 +13,7 @@ def generate_file(folder, temp_folder, final_file):
     opened_file = open(final_file, "w")
     css_folder = f"{folder}/.css/"
 
-    for file in os.listdir(css_folder):
+    for file in sorted(os.listdir(css_folder)):
         with open(os.path.join(css_folder, file)) as f:
             opened_file.write(f.read() + '\n')
 
@@ -28,7 +28,7 @@ def generate_file(folder, temp_folder, final_file):
             css_path = os.path.join(version_path, '.css')
 
             if os.path.exists(css_path):
-                for css_file in os.listdir(css_path):
+                for css_file in sorted(os.listdir(css_path)):
                     with open(os.path.join(css_path, css_file)) as f:
                         opened_file.write(f.read() + '\n')
 
