@@ -4,6 +4,11 @@
 .quick-settings {
 	padding: 12px !important;
 	border-radius: 24px !important;
+	/* .popup-menu-content (same node) sets `margin: 5px 0`, which is fine for a
+	   desktop boxpointer floating below the panel, but on the mobile shell the QS
+	   is a fullscreen box pinned to y=0 — the 5px top margin then shows the
+	   wallpaper above the panel. Zero it (matches Adwaita's mobile reset). */
+	margin: 0 !important;
 }
 
 .quick-settings-grid {
