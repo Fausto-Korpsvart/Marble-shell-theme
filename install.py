@@ -29,6 +29,9 @@ def main():
     colors_definer = ColorsDefiner(config.colors_json)
     args = ArgumentsDefiner(colors_definer.colors).parse()
 
+    if args.gnome_version:
+        config.gnome_version_override = args.gnome_version
+
     installer_class = GlobalThemeInstaller if args.gdm else LocalThemeInstaller
     installer = installer_class(args, colors_definer)
 
