@@ -1,4 +1,3 @@
-# TODO: Add ability to delete custom colors
 # TODO: Create an interface where the user can select which themes to delete
 # TODO: Add a flag to skip the confirmation prompt
 
@@ -12,18 +11,35 @@ from .parse_folder import parse_folder
 from .. import config
 import os
 
+def selected_color_names(args: argparse.Namespace, color_keys) -> list[str]:
+    """
+    Names of the themes selected for removal from the CLI arguments.
+
+    Includes both predefined color flags (e.g. ``--blue``) and custom themes
+    installed via ``--name`` / ``--hue``. The latter fixes #61, where custom
+    colors could previously only be removed via ``-a`` (remove all), not
+    individually by name or hue.
+    """
+    args_dict = vars(args)
+    names = [color for color in color_keys if args_dict.get(color)]
+
+    custom = args.name if args.name else (
+        f"hue{args.hue}" if args.hue is not None else None)
+    if custom and custom not in names:
+        names.append(custom)
+
+    return names
+
+
 def remove_files(args: argparse.Namespace, formatted_colors: dict[str, Any]):
     """Delete already installed Marble theme"""
     themes = detect_themes(config.themes_folder)
 
-    filtered_themes = themes
-
     if args.all:
         filtered_themes = themes
-    if not args.all:
-        args_dict = vars(args)
-        arguments = [color for color in formatted_colors.keys() if args_dict.get(color)]
-        filtered_themes = themes.filter(arguments)
+    else:
+        selected = selected_color_names(args, formatted_colors.keys())
+        filtered_themes = themes.filter(selected)
 
     if not filtered_themes:
         Console.Line().error("No matching themes found.")
