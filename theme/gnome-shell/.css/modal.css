@@ -31,6 +31,36 @@
 	padding: 8px !important;
 }
 
+/* prompt dialog labels (polkit auth - fingerprint, error messages) */
+.prompt-dialog .prompt-dialog-error-label,
+.prompt-dialog .prompt-dialog-info-label,
+.prompt-dialog .prompt-dialog-null-label {
+	text-align: center;
+	padding: 9px;
+	border-radius: 8px;
+	margin: 4px 0;
+}
+.prompt-dialog .prompt-dialog-error-label {
+	color: #cd9309;
+	background-color: rgba(205, 147, 9, 0.1);
+}
+.prompt-dialog .prompt-dialog-info-label {
+	color: TEXT-PRIMARY-COLOR;
+	background-color: BORDER-MENU-SHADOW;
+}
+
+/* run dialog (Alt+F2) */
+.run-dialog {
+	width: 24em;
+	padding-bottom: 6px;
+}
+.run-dialog .run-dialog-entry {
+	padding: 12px 9px;
+}
+.run-dialog .run-dialog-description {
+	color: TEXT-SECONDARY-COLOR;
+}
+
 
 /* button in modals */
 .modal-dialog-linked-button, /* 46 */
