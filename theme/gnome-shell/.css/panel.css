@@ -1,14 +1,16 @@
 /* Panel */
 
 #panel {
-	background-color: BACKGROUND-OPAQUE-COLOR;
+	background-color: BACKGROUND-OPAQUE-COLOR !important;
 	height: 34px;
 	font-size: 13px;
 	box-shadow: none;
 }
 
 /* panel in overview, lock screen */
-#panel:overview, #panel.unlock-screen, #panel.login-screen {
+#panel:overview,
+#panel.unlock-screen,
+#panel.login-screen {
 	background-color: transparent;
 	transition-duration: 0.25s;
 }
@@ -20,15 +22,30 @@
 }
 
 /* allows to shrink horizontal padding for app icons */
-.panel-button { -natural-hpadding: 6px !important; }
-.panel-status-indicators-box:first-child { padding-left: 3px; }
-.panel-status-indicators-box:last-child { padding-right: 3px; }
-.panel-status-indicators-box:first-child:last-child { padding: 0; }
-.panel-button#panelActivities { -natural-hpadding: 10px !important; }
+.panel-button {
+	-natural-hpadding: 6px !important;
+}
+
+.panel-status-indicators-box:first-child {
+	padding-left: 3px;
+}
+
+.panel-status-indicators-box:last-child {
+	padding-right: 3px;
+}
+
+.panel-status-indicators-box:first-child:last-child {
+	padding: 0;
+}
+
+.panel-button#panelActivities {
+	-natural-hpadding: 10px !important;
+}
 
 /* panel buttons */
 .panel-button,
-.panel-button .clock { /* DND / new messages icon */
+.panel-button .clock {
+	/* DND / new messages icon */
 	color: TEXT-PRIMARY-COLOR;
 	border-radius: 9px;
 	border: 1px solid PANEL-BUTTON-BORDER !important;
@@ -37,7 +54,7 @@
 }
 
 .panel-button:hover,
-.panel-button:hover .clock, 
+.panel-button:hover .clock,
 .panel-button:active,
 .panel-button:active .clock {
 	background-color: ACCENT-DISABLED_HOVER;
@@ -45,14 +62,19 @@
 
 /* workspaces indicator in activities button (45+) */
 #panel .workspace-dot {
-	background-color: TEXT-PRIMARY-COLOR;
+	background-color: TEXT-PRIMARY-COLOR !important;
 	border-radius: 99px;
+}
+
+#panel .system-status-icon {
+	color: TEXT-PRIMARY-COLOR !important;
 }
 
 /*  indicator for active */
 #panel .screencast-indicator,
 #panel .remote-access-indicator,
-#panel .panel-button.screen-sharing-indicator { /* when sharing screen */
+#panel .panel-button.screen-sharing-indicator {
+	/* when sharing screen */
 	background: #cd9309;
 }
 
@@ -85,14 +107,14 @@
 
 
 /* panel clock fix. remove additional background */
-.clock-display { 
+.clock-display {
 	background-color: transparent !important;
 	box-shadow: none;
 	border: none !important;
 }
 
 /* additional background for DND / new messages icon */
-.clock-display StIcon { 
+.clock-display StIcon {
 	padding: 8px;
 	margin: 0;
 }
