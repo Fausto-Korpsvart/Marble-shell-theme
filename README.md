@@ -189,9 +189,9 @@ If you want to remove the theme, see the [uninstallation](#%EF%B8%8F-uninstallat
 
 | Option                     | Secondary option | Description                                            |
 |----------------------------|------------------|--------------------------------------------------------|
-| -Pds, --panel-default-size |                  | set default panel size                                 |
-| -Pnp, --panel-no-pill      |                  | remove panel button background                         |
-| -Ptc, --panel-text-color   | #abcdef        | custom panel HEX(A) text color                         |
+| --panel-default-size       |                  | set default panel size                                 |
+| --panel-no-pill            |                  | remove panel button background                         |
+| --panel-text-color         | #abcdef        | custom panel HEX(A) text color                         |
 | --panel-dark, --dark-panel |                  | apply dark theme to the panel                          |
 | --wider-panel              |                  | make the panel a bit wider                             |
 | --panel-grouped-buttons    |                  | group buttons in the panel                             |

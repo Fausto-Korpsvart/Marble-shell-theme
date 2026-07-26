@@ -7,9 +7,9 @@ panel_folder = f"{config.tweaks_folder}/panel"
 
 def define_arguments(parser):
     panel_args = parser.add_argument_group('Panel tweaks')
-    panel_args.add_argument('-Pds', '--panel-default-size', action='store_true', help='set default panel size')
-    panel_args.add_argument('-Pnp', '--panel-no-pill', action='store_true', help='remove panel button background')
-    panel_args.add_argument('-Ptc', '--panel-text-color', type=str, nargs='?', help='custom panel HEX(A) text color')
+    panel_args.add_argument('--panel-default-size', action='store_true', help='set default panel size')
+    panel_args.add_argument('--panel-no-pill', action='store_true', help='remove panel button background')
+    panel_args.add_argument('--panel-text-color', type=str, nargs='?', help='custom panel HEX(A) text color')
     panel_args.add_argument('--panel-dark', '--dark-panel', action='store_true', help='make top panel dark regardless of theme mode')
     panel_args.add_argument('--wider-panel', action='store_true', help='make the panel wider')
     panel_args.add_argument('--panel-grouped-buttons', action='store_true', help='group panel buttons together')
