@@ -10,6 +10,12 @@ tweaks_folder = "tweaks"
 themes_folder = os.path.expanduser("~/.themes")
 raw_theme_folder = "theme"
 
+# Runtime override for the detected GNOME Shell version. Set from the
+# ``--gnome-version`` CLI flag so version-specific style overlays can be
+# selected without a running gnome-shell (sandboxed Nix builds, CI). ``None``
+# means fall back to auto-detection via ``gnome-shell --version``.
+gnome_version_override = None
+
 # GDM definitions
 global_gnome_shell_theme = "/usr/share/gnome-shell"
 gnome_shell_gresource = "gnome-shell-theme.gresource"

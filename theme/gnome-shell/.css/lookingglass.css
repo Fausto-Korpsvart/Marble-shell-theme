@@ -36,6 +36,32 @@
 	border-radius: 12px;
 }
 
+/* Fixes #78: dark-on-dark text & transparent popups in the actors/object inspector (GNOME 49+) */
+#LookingGlassDialog,
+#LookingGlassDialog .actor-link,
+#LookingGlassDialog .shell-link,
+#LookingGlassDialog .lg-obj-inspector-title,
+#LookingGlassDialog .lg-completions-text {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+#LookingGlassDialog .lg-obj-inspector {
+	background-color: #191919;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 12px;
+	padding: 8px;
+}
+
+#LookingGlassDialog .lg-obj-inspector-button {
+	color: rgba(255, 255, 255, 0.75);
+	border-radius: 8px;
+}
+
+#LookingGlassDialog .lg-obj-inspector-button:hover {
+	background-color: rgba(255, 255, 255, 0.12);
+	color: rgba(255, 255, 255, 0.95);
+}
+
 .lg-debug-flag-button .toggle-switch {
 	margin: 5px;
 	border-radius: 10px;

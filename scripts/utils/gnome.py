@@ -8,12 +8,18 @@ from scripts.utils.parse_folder import parse_folder
 
 def gnome_version() -> str | None:
     """
-    Get gnome-shell version
+    Get gnome-shell version.
+
+    Honours ``config.gnome_version_override`` (set by ``--gnome-version``) so a
+    version can be forced where no gnome-shell is running — e.g. sandboxed
+    builds or CI. Falls back to ``gnome-shell --version`` otherwise.
     """
+    if config.gnome_version_override is not None:
+        return config.gnome_version_override
     try:
         output = subprocess.check_output(['gnome-shell', '--version'], text=True).strip()
         return output.split(' ')[2]
-    except subprocess.CalledProcessError:
+    except (subprocess.CalledProcessError, FileNotFoundError):
         return None
 
 def apply_gnome_theme(theme=None) -> bool:

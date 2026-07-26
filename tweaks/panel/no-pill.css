@@ -21,3 +21,7 @@
 .panel-button.clock-display:active {
 	box-shadow: none;
 }
+
+.popup-menu-content {
+	margin: 0;
+}

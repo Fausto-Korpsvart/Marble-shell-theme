@@ -62,6 +62,10 @@ class ArgumentsDefiner:
         color_tweaks.add_argument('--sat', type=int, choices=range(0, 251),
                                   help='custom color saturation (<100%% - reduce, >100%% - increase)',
                                   metavar='(0 - 250)')
+        color_tweaks.add_argument('--gnome-version', metavar='VERSION',
+                                  help='override the detected GNOME Shell version (e.g. 49) when selecting '
+                                       'version-specific style overlays; useful for sandboxed builds and CI '
+                                       'where no gnome-shell is running')
 
     def _define_gdm_arguments(self):
         gdm_theming = self._parser.add_argument_group('GDM theming')

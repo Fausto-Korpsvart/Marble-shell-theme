@@ -136,26 +136,34 @@ StScrollBar StBin#trough {
 	background-color: transparent;
 }
 
-StScrollBar StButton#vhandle,
-StScrollBar StButton#hhandle {
+StScrollBar StButton#vhandle,       /* up to GNOME 48 */
+StScrollBar StButton#hhandle,
+StScrollBar > .vhandle,             /* GNOME 49+ (handles became .vhandle/.hhandle style classes) */
+StScrollBar > .hhandle {
 	border-radius: 8px;
 	background-color: SCROLLBAR-COLOR;
 	border: 3px solid transparent;
 	transition-duration: 100ms;
 }
 
-.message-list StScrollBar StButton#vhandle,
-.message-view StScrollBar StButton#hhandle {
+.message-list StScrollBar StButton#vhandle,       /* up to GNOME 48 */
+.message-view StScrollBar StButton#hhandle,
+.message-list StScrollBar > .vhandle,             /* GNOME 49+ */
+.message-view StScrollBar > .hhandle {
 	border-radius: 0;
 	border: 0px solid transparent
 }
 
 StScrollBar StButton#vhandle:hover,
-StScrollBar StButton#hhandle:hover {
+StScrollBar StButton#hhandle:hover,
+StScrollBar > .vhandle:hover,       /* GNOME 49+ */
+StScrollBar > .hhandle:hover {
 	background-color: SCROLLBAR_HOVER;
 }
 
 StScrollBar StButton#vhandle:active,
-StScrollBar StButton#hhandle:active {
+StScrollBar StButton#hhandle:active,
+StScrollBar > .vhandle:active,      /* GNOME 49+ */
+StScrollBar > .hhandle:active {
 	background-color: SCROLLBAR_ACTIVE;
 }
