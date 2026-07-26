@@ -4,7 +4,7 @@
 	color: TEXT-PRIMARY-COLOR;
 	background: BACKGROUND-COLOR; 
 	padding: 8px;
-	margin: 5px 0; /* for panel popovers */
+	margin: 4px 0;
 	border-radius: 20px;
 	border: 1px solid BORDER-MENU-SHADOW;
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);	
