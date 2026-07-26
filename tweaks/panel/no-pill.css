@@ -14,7 +14,7 @@
 .panel-button:active,
 .panel-button:active .clock {
 	background-color: transparent;
-	box-shadow: inset 0 0 0 999px ACCENT-DISABLED_HOVER;
+	box-shadow: inset 0 0 0 999px PANEL-BTN-HOVER;
 }
 
 .panel-button.clock-display:hover,

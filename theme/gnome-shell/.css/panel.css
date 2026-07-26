@@ -1,7 +1,7 @@
 /* Panel */
 
 #panel {
-	background-color: BACKGROUND-OPAQUE-COLOR !important;
+	background-color: PANEL-BG-COLOR !important;
 	height: 34px;
 	font-size: 13px;
 	box-shadow: none;
@@ -46,10 +46,10 @@
 .panel-button,
 .panel-button .clock {
 	/* DND / new messages icon */
-	color: TEXT-PRIMARY-COLOR;
+	color: PANEL-TXT-COLOR;
 	border-radius: 9px;
-	border: 1px solid PANEL-BUTTON-BORDER !important;
-	background-color: ACCENT-DISABLED-COLOR;
+	border: 1px solid PANEL-BTN-BORDER !important;
+	background-color: PANEL-BTN-COLOR;
 	box-shadow: none;
 }
 
@@ -57,17 +57,17 @@
 .panel-button:hover .clock,
 .panel-button:active,
 .panel-button:active .clock {
-	background-color: ACCENT-DISABLED_HOVER;
+	background-color: PANEL-BTN-HOVER;
 }
 
 /* workspaces indicator in activities button (45+) */
 #panel .workspace-dot {
-	background-color: TEXT-PRIMARY-COLOR !important;
+	background-color: PANEL-TXT-COLOR !important;
 	border-radius: 99px;
 }
 
 #panel .system-status-icon {
-	color: TEXT-PRIMARY-COLOR !important;
+	color: PANEL-TXT-COLOR !important;
 }
 
 /*  indicator for active */
@@ -102,7 +102,7 @@
 #panel.unlock-screen .panel-button,
 #panel.login-screen .panel-button,
 #panel:overview .panel-button {
-	color: TEXT-PRIMARY-COLOR !important;
+	color: PANEL-TXT-COLOR !important;
 }
 
 

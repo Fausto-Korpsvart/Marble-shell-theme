@@ -10,12 +10,16 @@ def define_arguments(parser):
     panel_args.add_argument('-Pds', '--panel-default-size', action='store_true', help='set default panel size')
     panel_args.add_argument('-Pnp', '--panel-no-pill', action='store_true', help='remove panel button background')
     panel_args.add_argument('-Ptc', '--panel-text-color', type=str, nargs='?', help='custom panel HEX(A) text color')
+    panel_args.add_argument('--panel-dark', '--dark-panel', action='store_true', help='make top panel dark regardless of theme mode')
     panel_args.add_argument('--wider-panel', action='store_true', help='make the panel wider')
     panel_args.add_argument('--panel-grouped-buttons', action='store_true', help='group panel buttons together')
     panel_args.add_argument('--floating-panel', action='store_true', help='make the panel floating (transparent background)')
 
 
 def apply_tweak(args, theme: Theme, colors):
+    if getattr(args, 'panel_dark', False):
+        apply_dark_panel_colors(colors)
+
     if args.panel_default_size:
         theme.add_from_file(f"{panel_folder}/def-size.css")
 
@@ -34,6 +38,29 @@ def apply_tweak(args, theme: Theme, colors):
 
     if args.panel_grouped_buttons:
         theme.add_from_file(f"{panel_folder}/grouped-buttons.css")
+
+
+def apply_dark_panel_colors(colors):
+    panel_token_sources = {
+        "PANEL-BG-COLOR": "BACKGROUND-OPAQUE-COLOR",
+        "PANEL-TXT-COLOR": "TEXT-PRIMARY-COLOR",
+        "PANEL-BTN-COLOR": "ACCENT-DISABLED-COLOR",
+        "PANEL-BTN-HOVER": "ACCENT-DISABLED_HOVER",
+        "PANEL-BTN-BORDER": "PANEL-BUTTON-BORDER",
+        "PANEL-DASH-BG": "DASH-COLOR",
+        "PANEL-MENU-SHADOW": "BORDER-MENU-SHADOW",
+        "PANEL-BTN-OPAQUE-HOVER": "ACCENT-DISABLED-OPAQUE_HOVER",
+        "PANEL-BTN-OPAQUE-COLOR": "ACCENT-DISABLED-OPAQUE-COLOR",
+        "PANEL-SHADOW": "BORDER-SHADOW",
+    }
+    for panel_token, source_token in panel_token_sources.items():
+        if source_token in colors.replacers:
+            dark_def = colors.replacers[source_token].get("dark")
+            if dark_def:
+                colors.replacers[panel_token] = {
+                    "light": dark_def,
+                    "dark": dark_def
+                }
 
 
 def resolve_panel_text_color(theme: Theme, argument_property):

@@ -26,6 +26,47 @@
             "default" : "TEXT-SECONDARY-COLOR"
         },
 
+        "PANEL-BG-COLOR" : {
+            "_comment" : "Background color for panel",
+            "default" : "BACKGROUND-OPAQUE-COLOR"
+        },
+        "PANEL-TXT-COLOR" : {
+            "_comment" : "Primary text color for panel",
+            "default" : "TEXT-PRIMARY-COLOR"
+        },
+        "PANEL-BTN-COLOR" : {
+            "_comment" : "Background color for panel buttons",
+            "default" : "ACCENT-DISABLED-COLOR"
+        },
+        "PANEL-BTN-HOVER" : {
+            "_comment" : "Hover background color for panel buttons",
+            "default" : "ACCENT-DISABLED_HOVER"
+        },
+        "PANEL-BTN-BORDER" : {
+            "_comment" : "Border color for panel buttons",
+            "default" : "PANEL-BUTTON-BORDER"
+        },
+        "PANEL-DASH-BG" : {
+            "_comment" : "Special dash color used in floating panel",
+            "default" : "DASH-COLOR"
+        },
+        "PANEL-MENU-SHADOW" : {
+            "_comment" : "Border menu shadow used in floating panel",
+            "default" : "BORDER-MENU-SHADOW"
+        },
+        "PANEL-BTN-OPAQUE-HOVER" : {
+            "_comment" : "Opaque hover color for floating panel buttons",
+            "default" : "ACCENT-DISABLED-OPAQUE_HOVER"
+        },
+        "PANEL-BTN-OPAQUE-COLOR" : {
+            "_comment" : "Opaque background color for floating panel buttons",
+            "default" : "ACCENT-DISABLED-OPAQUE-COLOR"
+        },
+        "PANEL-SHADOW" : {
+            "_comment" : "Border shadow used in floating panel in overview",
+            "default" : "BORDER-SHADOW"
+        },
+
         "ACCENT-COLOR" : {
             "_comment" : "Active buttons/toggles",
             "replace" : "ACCENT-COLOR",

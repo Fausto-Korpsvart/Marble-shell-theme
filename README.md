@@ -184,11 +184,15 @@ If you want to remove the theme, see the [uninstallation](#%EF%B8%8F-uninstallat
 **Floating panel**
 ![Floating panel](./readme-images/tweaks/floating-panel.png "Floating panel")
 
+**Always dark panel** (ignores theme's dark/light mode)
+![Always dark panel](./readme-images/tweaks/always-dark-panel.jpg "Always dark panel")
+
 | Option                     | Secondary option | Description                                            |
 |----------------------------|------------------|--------------------------------------------------------|
 | -Pds, --panel-default-size |                  | set default panel size                                 |
 | -Pnp, --panel-no-pill      |                  | remove panel button background                         |
-| -Ptc, --panel-text-color   | #abcdef          | custom panel HEX(A) text color                         |
+| -Ptc, --panel-text-color   | #abcdef        | custom panel HEX(A) text color                         |
+| --panel-dark, --dark-panel |                  | apply dark theme to the panel                          |
 | --wider-panel              |                  | make the panel a bit wider                             |
 | --panel-grouped-buttons    |                  | group buttons in the panel                             |
 | --floating-panel           |                  | make the panel floating (transparent panel background) |

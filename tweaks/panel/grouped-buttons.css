@@ -55,10 +55,10 @@
 
 /* use entire button area for clock */
 .dashtopanelMainPanel .clock-display {
-    background-color: ACCENT-DISABLED-COLOR !important;
+    background-color: PANEL-BTN-COLOR !important;
     margin-left: 0;
     margin-right: 0;
-    border: 1px solid PANEL-BUTTON-BORDER !important;
+    border: 1px solid PANEL-BTN-BORDER !important;
     border-left-width: 0 !important;
 }
 
@@ -69,5 +69,5 @@
 }
 
 .dashtopanelMainPanel .clock-display:hover {
-    background-color: ACCENT-DISABLED_HOVER !important;
+    background-color: PANEL-BTN-HOVER !important;
 }

@@ -7,7 +7,7 @@ from scripts.utils.color_converter.color_converter import ColorConverter
 
 class ColorReplacementGenerator:
     def __init__(self, colors_provider: ColorsDefiner, color_converter: ColorConverter):
-        self.colors = copy.deepcopy(colors_provider)
+        self.colors = colors_provider
         self.color_converter = color_converter
 
     def convert(self, mode: InstallationMode, theme_color: InstallationColor) -> list[tuple[str, str]]:
