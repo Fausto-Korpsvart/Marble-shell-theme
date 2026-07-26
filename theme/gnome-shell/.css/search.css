@@ -29,6 +29,11 @@
 	border-radius: 10px;
 }
 
+/* spinner while searching */
+.search-statusbox {
+	color: TEXT-SECONDARY-COLOR;
+}
+
 /* search result listitem -> item title (with leading icon) */
 .list-search-result .list-search-result-title {
 	color: TEXT-PRIMARY-COLOR;

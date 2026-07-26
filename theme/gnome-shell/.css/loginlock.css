@@ -67,6 +67,7 @@
 
 
 /* login buttons */
+.a11y-button,
 .cancel-button,
 .switch-user-button,
 .login-dialog-session-list-button {
@@ -79,12 +80,14 @@
     transition-duration: 100ms;
 }
 
+.a11y-button:hover,
 .cancel-button:hover,
 .switch-user-button:hover,
 .login-dialog-session-list-button:hover {
     background-color: ACCENT-DISABLED_HOVER;
 }
 
+.a11y-button:focus,
 .cancel-button:focus,
 .switch-user-button:focus,
 .login-dialog-session-list-button:focus {
@@ -92,6 +95,7 @@
     box-shadow: inset 0 0 0 2px ACCENT-SECONDARY-COLOR !important;
 }
 
+.a11y-button:focus:active,
 .cancel-button:focus:active,
 .switch-user-button:focus:active,
 .login-dialog-session-list-button:focus:active,
@@ -102,6 +106,7 @@
     box-shadow: inset 0 0 0 1px ACCENT-SECONDARY-COLOR !important;
 }
 
+.a11y-button:active,
 .cancel-button:active,
 .switch-user-button:active,
 .login-dialog-session-list-button:active {

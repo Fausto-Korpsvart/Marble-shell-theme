@@ -11,7 +11,7 @@
 #panel:overview,
 #panel.unlock-screen,
 #panel.login-screen {
-	background-color: transparent;
+	background-color: transparent !important;
 	transition-duration: 0.25s;
 }
 
