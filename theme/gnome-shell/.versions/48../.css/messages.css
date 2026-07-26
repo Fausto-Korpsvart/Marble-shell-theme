@@ -3,6 +3,10 @@
 	margin-bottom: 8px !important;
 }
 
+.message-view .message:focus {
+	background-color: SECTION-OPAQUE-COLOR !important;
+}
+
 .message:second-in-stack {
 	background-color: SECTION-OPAQUE_SECOND;
 }

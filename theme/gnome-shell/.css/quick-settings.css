@@ -8,7 +8,7 @@
 
 .quick-settings-grid {
 	spacing-rows: 12px;
-  	spacing-columns: 12px;
+	spacing-columns: 12px;
 }
 
 
@@ -33,16 +33,23 @@
 
 
 /* toggles in QS */
-.quick-toggle, /* 43 */
-.quick-menu-toggle .quick-toggle, /* 44-47 */
-.quick-toggle-has-menu .quick-toggle { /* 48+ */
+.quick-toggle,
+/* 43 */
+.quick-menu-toggle .quick-toggle,
+/* 44-47 */
+.quick-toggle-has-menu .quick-toggle {
+	/* 48+ */
 	color: TEXT-PRIMARY-COLOR;
 	border-radius: 14px;
 	background-color: ACCENT-DISABLED-COLOR;
 	transition-duration: 100ms;
 }
 
-.quick-toggle-has-menu .quick-toggle-separator { width: 0; } /* margins are set in below for backward compatibility */
+.quick-toggle-has-menu .quick-toggle-separator {
+	width: 0;
+}
+
+/* margins are set in below for backward compatibility */
 
 /* toggle name */
 .quick-toggle .quick-toggle-label {
@@ -51,9 +58,14 @@
 
 /* adjust borders if quick toggle has expandable menu button (quick-toggle-arrow)44-47] (quick-toggle-menu-button)[48+] */
 .quick-menu-toggle .quick-toggle:ltr,
-.quick-toggle-has-menu .quick-toggle:ltr { border-radius: 14px 0 0 14px; }
+.quick-toggle-has-menu .quick-toggle:ltr {
+	border-radius: 14px 0 0 14px;
+}
+
 .quick-menu-toggle .quick-toggle:rtl,
-.quick-toggle-has-menu .quick-toggle:rtl { border-radius: 0 14px 14px 0; }
+.quick-toggle-has-menu .quick-toggle:rtl {
+	border-radius: 0 14px 14px 0;
+}
 
 /* if quick toggle has no expandable menu button (quick-toggle-arrow)[44+] */
 .quick-menu-toggle .quick-toggle:last-child,
@@ -106,7 +118,7 @@
 .quick-menu-toggle .quick-toggle:checked:hover,
 .quick-menu-toggle .quick-toggle-arrow:checked:hover,
 .quick-toggle-has-menu .quick-toggle:checked:hover,
-.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover{
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
 	color: BUTTON-TEXT-COLOR;
 	background-color: BUTTON_HOVER;
 }
@@ -117,7 +129,8 @@
 .quick-slider .slider-bin {
 	padding: 4px;
 	margin: 0;
-	color: BUTTON-TEXT-COLOR; /* up tp 46 */
+	color: BUTTON-TEXT-COLOR;
+	/* up tp 46 */
 	border-radius: 99px;
 }
 
@@ -145,12 +158,11 @@
 /* overrides because of 
 https://gitlab.gnome.org/GNOME/gnome-shell/-/commit/beb77f58243265a6cc62b720a5b0ecd66efd50a1#fb75f14505e58d3bc51f2498ef328d1405d89e83_94_95 */
 .quick-toggle-menu {
-	background-color: BACKGROUND-COLOR !important; 
+	background-color: BACKGROUND-COLOR !important;
 	color: TEXT-PRIMARY-COLOR !important;
 	border-radius: 16px;
 	padding: 10px;
 	box-shadow: inset 0 0 0 1px BORDER-SHADOW;
-  	margin: 12px 12px 0;
 }
 
 /* header icon in expanded menu */
